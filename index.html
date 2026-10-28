@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#263b32">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#34254f">
+<meta name="description" content="Le Ventoux, studio climatisé pour 2 personnes à Aubignan, au cœur de la Provence. Photos, équipements et réservation.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
 <title>Le Ventoux | Studio en Provence</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f7f3eb;color:#29372e}
-header{background:#263b32;color:white;text-align:center;padding:32px 20px}
-header h1{font-family:Georgia,serif;font-size:42px;margin:0 0 8px}
-header p{margin:0;color:#e8d8b8}
-.hero{height:220px;background:linear-gradient(#0002,#0005),url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80') center/cover;display:flex;align-items:end;padding:20px;color:white;font-size:22px;font-weight:bold}
-main{max-width:650px;margin:auto;padding:20px}
-.card{background:white;border-radius:16px;padding:20px;margin:15px 0;box-shadow:0 4px 15px #263b3210}
-h2{font-family:Georgia,serif;color:#52664b;margin-top:0}
-.button{display:block;background:#52664b;color:white;text-align:center;text-decoration:none;padding:13px;border-radius:10px;margin-top:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.small{background:#eee8dc;border-radius:12px;padding:15px;text-align:center}
-footer{text-align:center;padding:25px;background:#263b32;color:white}
+:root{--purple:#38234f;--plum:#59416d;--cream:#fbf5e9;--sand:#e6d5b7;--ink:#30283a;--olive:#66714d;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit}.topbar{position:sticky;top:0;z-index:10;background:#fffdf8ed;backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 4%;box-shadow:0 2px 15px #38234f12}
+.brand{font-family:Georgia,serif;font-size:25px;font-weight:bold;color:var(--purple);line-height:1.05;text-decoration:none;white-space:nowrap}.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:3px;text-align:center;margin-top:5px}
+nav{display:flex;gap:18px;align-items:center;font-size:14px}nav a{text-decoration:none;font-weight:600}nav a:hover{color:var(--olive)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 17px;font-size:15px;font-weight:bold;text-decoration:none;cursor:pointer;transition:transform .15s,opacity .15s}.btn:hover{transform:translateY(-2px);opacity:.94}.btn-main{background:var(--purple);color:#fff}.btn-airbnb{background:#ff385c;color:#fff}.btn-booking{background:#0756b8;color:#fff}.btn-outline{border:1px solid #fff9;color:#fff;background:#ffffff12}
+.hero{min-height:540px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:65px 18px;background:linear-gradient(90deg,#1e182b9c,#1e182b25),url('photos/studio-principal.jpg') center 50%/cover}
+.hero-inner{max-width:950px;background:#24183155;border:1px solid #ffffff40;border-radius:24px;padding:30px 24px;backdrop-filter:blur(3px)}.hero h1{font:clamp(52px,9vw,94px)/1 Georgia,serif;margin:0 0 8px;text-shadow:0 2px 14px #0006}.eyebrow{letter-spacing:5px;font-size:clamp(12px,2vw,17px);margin:0 0 14px}.location{font-size:18px;margin:0 0 22px}.features{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:18px auto 25px;font-weight:bold}.feature{background:#ffffff20;border:1px solid #ffffff65;border-radius:30px;padding:7px 12px}.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+main{max-width:1200px;margin:auto;padding:24px 18px 34px}.welcome{display:grid;grid-template-columns:1.05fr 1fr;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 28px #26352d0b;margin:0 0 18px}.welcome img{width:100%;height:100%;min-height:340px;object-fit:cover}.welcome-copy{padding:30px}.kicker{font-size:11px;letter-spacing:2px;color:var(--olive);font-weight:bold}.welcome h2,.section-title{font:bold 32px Georgia,serif;color:var(--purple);margin:3px 0 12px}.amenities{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}.amenity{text-align:center;font-size:13px}.amenity b{display:block;font-size:26px;margin-bottom:3px;color:var(--plum)}.amenity strong{display:block}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:32px 0 12px}.section-head p{margin:0;color:#6d6473}.gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:190px 190px;gap:10px}.gallery a{display:block;position:relative;overflow:hidden;border-radius:14px;background:#e5dccd}.gallery a:first-child{grid-row:1/3}.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}.gallery a:hover img{transform:scale(1.04)}.gallery span{position:absolute;bottom:0;left:0;right:0;padding:26px 12px 10px;color:white;font-weight:bold;background:linear-gradient(transparent,#1d162caa)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}.tile{background:#fff;border-radius:14px;overflow:hidden;text-decoration:none;box-shadow:0 6px 20px #26352d0a}.tile img{width:100%;height:135px;object-fit:cover;display:block}.tile-copy{padding:12px 14px}.tile h3{font:bold 20px Georgia,serif;color:var(--purple);margin:0 0 3px}.tile p{font-size:13px;margin:0}
+.lower{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.panel{background:#fff;border-radius:16px;overflow:hidden;display:grid;grid-template-columns:.75fr 1fr}.panel img{width:100%;height:100%;min-height:265px;object-fit:cover}.panel-copy{padding:22px}.panel h2{font:bold 27px Georgia,serif;color:var(--purple);margin:2px 0 8px}.stack{display:grid;gap:9px;margin-top:14px}.note{font-size:12px;color:#69766c;margin-top:12px}
+.map-panel{background:var(--purple);color:#fff;grid-template-columns:1fr}.map-panel h2{color:#fff}.map-panel img{height:175px;min-height:175px}.map-panel p{font-size:14px}.map-panel .btn{border:1px solid #ffffff88;background:transparent;color:#fff;justify-self:start}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:#ffffffa8;border-radius:14px;margin-top:18px;padding:18px}.quick a{display:flex;gap:10px;align-items:center;text-decoration:none;border-right:1px solid #dfe3d9;padding:0 10px;font-size:13px}.quick a:last-child{border:0}.quick strong{display:block;font-size:14px}.quick .icon{font-size:26px;color:var(--plum)}
+.install{margin:18px 0 0;background:#eee4f1;border:1px solid #d8c6df;border-radius:15px;padding:18px;display:flex;justify-content:space-between;align-items:center;gap:15px}.install h3{font: bold 21px Georgia,serif;color:var(--purple);margin:0 0 3px}.install p{margin:0;font-size:14px}
+footer{background:var(--purple);color:white;text-align:center;padding:28px 16px 34px;margin-top:0}footer .brand{color:#fff;display:inline-block;margin-bottom:10px}footer p{margin:4px}
+@media(max-width:850px){.topbar{flex-wrap:wrap}.topbar nav{order:3;width:100%;overflow:auto;justify-content:flex-start;padding:6px 0}.topbar nav a{white-space:nowrap}.welcome{grid-template-columns:1fr}.welcome img{height:270px;min-height:0}.tiles{grid-template-columns:repeat(2,1fr)}.lower{grid-template-columns:1fr}.quick{grid-template-columns:repeat(2,1fr)}.quick a:nth-child(2){border-right:0}.gallery{grid-template-rows:155px 155px}.panel{grid-template-columns:.8fr 1fr}}
+@media(max-width:480px){.brand{font-size:22px}.topbar{padding:12px}.topbar>.btn{padding:10px 12px}.hero{min-height:500px;padding:30px 14px}.hero-inner{padding:26px 15px}.hero h1{font-size:53px}.eyebrow{letter-spacing:3px}.welcome-copy{padding:22px}.amenities{grid-template-columns:repeat(2,1fr);row-gap:18px}.tiles{gap:9px}.tile img{height:105px}.tile-copy{padding:10px}.tile h3{font-size:18px}.panel{grid-template-columns:1fr}.panel img{height:190px;min-height:0}.panel-copy{padding:20px}.quick{padding:12px 8px}.quick a{padding:8px 5px}.quick .icon{font-size:22px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:190px 120px 120px}.gallery a:first-child{grid-row:1/2;grid-column:1/3}.gallery a img{height:100%}.section-head{display:block}.install{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
 <body>
-<header>
-<h1>Le Ventoux</h1>
-<p>Votre parenthèse provençale 🌿</p>
+<header class="topbar">
+<a class="brand" href="#accueil">⌁ Le Ventoux<small>STUDIO EN PROVENCE</small></a>
+<nav aria-label="Navigation principale"><a href="#accueil">Accueil</a><a href="#studio">Le studio</a><a href="#photos">Photos</a><a href="#decouvrir">À découvrir</a><a href="#pratique">Infos pratiques</a></nav>
+<a class="btn btn-main" href="#reservation">Réserver</a>
 </header>
-<div class="hero">Bienvenue en Provence</div>
+<section class="hero" id="accueil">
+<div class="hero-inner"><h1>Le Ventoux</h1><p class="eyebrow">STUDIO CLIMATISÉ · PROVENCE</p><p class="location">⌖ Aubignan · Vaucluse</p>
+<div class="features"><span class="feature">❄ Climatisé</span><span class="feature">♟ 2 personnes</span><span class="feature">▰ Lit 140 cm</span><span class="feature">Ⓟ Parking à proximité</span><span class="feature">⌁ Wi-Fi</span></div>
+<div class="hero-actions"><a class="btn btn-airbnb" href="https://www.airbnb.fr/rooms/1619705605066932698" target="_blank" rel="noopener">Réserver sur Airbnb ↗</a><a class="btn btn-booking" href="https://www.booking.com/Share-qVR2zi" target="_blank" rel="noopener">Trouver sur Booking.com ↗</a></div>
+</div></section>
 <main>
-<div class="card">
-<h2>Bonjour et bienvenue !</h2>
-<p>Nous sommes heureux de vous accueillir dans notre studio climatisé pour deux personnes, à Aubignan, au cœur du Vaucluse.</p>
-<p>Profitez du charme de la Provence, de ses villages, de ses marchés et des paysages du Mont Ventoux.</p>
-</div>
-<div class="card">
-<h2>🏡 Votre studio</h2>
-<div class="grid">
-<div class="small">🛏️<br><b>Lit 140 cm</b><br>Pour 2 personnes</div>
-<div class="small">❄️<br><b>Climatisation</b><br>Confort en toute saison</div>
-<div class="small">📺<br><b>Smart TV</b><br>Écran 32 pouces</div>
-<div class="small">☕<br><b>Kitchenette</b><br>Pour vos repas</div>
-</div>
-</div>
-<div class="card">
-<h2>🗺️ Découvrez les alentours</h2>
-<p>Partez explorer les trésors du Vaucluse.</p>
-<a class="button" href="https://www.google.com/maps/search/tourisme+autour+d%27Aubignan/" target="_blank">Explorer les environs</a>
-<a class="button" href="https://www.google.com/maps/search/Mont+Ventoux/" target="_blank">Découvrir le Mont Ventoux</a>
-<a class="button" href="https://www.google.com/maps/search/march%C3%A9+proven%C3%A7al+autour+d%27Aubignan/" target="_blank">Trouver un marché provençal</a>
-</div>
-<div class="card">
-<h2>🍽️ Restaurants et sorties</h2>
-<p>Envie d'un bon repas ou d'une balade ? Découvrez les bonnes adresses autour du studio.</p>
-<a class="button" href="https://www.google.com/maps/search/restaurants+Aubignan/" target="_blank">Trouver un restaurant</a>
-</div>
-<div class="card">
-<h2>🚗 Stationnement</h2>
-<p>Des possibilités de stationnement se trouvent à moins de 100 mètres du studio. Vérifiez les règles affichées sur place.</p>
-</div>
-<div class="card">
-<h2>📩 Besoin d'aide ?</h2>
-<p>Pour toute question concernant votre séjour, contactez votre hôte.</p>
-<a class="button" href="mailto:studioleventoux@gmail.com">Contacter Le Ventoux</a>
-</div>
+<section class="welcome" id="studio"><img src="photos/studio-principal.jpg" alt="Vue d’ensemble réelle du studio Le Ventoux" loading="eager"><div class="welcome-copy"><span class="kicker">BIENVENUE AU STUDIO</span><h2>Votre pied-à-terre en Provence</h2>
+<p>Un studio cosy et lumineux pour deux personnes, à Aubignan, au cœur du Comtat Venaissin. Le point de départ idéal pour découvrir le Mont Ventoux, les Dentelles de Montmirail et les villages provençaux.</p>
+<div class="amenities"><div class="amenity"><b>▰</b><strong>Lit 140 cm</strong>Pour 2 voyageurs</div><div class="amenity"><b>❄</b><strong>Climatisation</strong>Confort en été</div><div class="amenity"><b>▣</b><strong>Smart TV</strong>TV connectée</div><div class="amenity"><b>♨</b><strong>Kitchenette</strong>Plaque, micro-ondes, bouilloire</div></div>
+<a class="btn btn-main" href="#photos">Voir les photos →</a></div></section>
+<section id="photos"><div class="section-head"><div><span class="kicker">UN APERÇU DU LOGEMENT</span><h2 class="section-title">Le studio en images</h2></div><p>Les vraies photos de votre annonce</p></div>
+<div class="gallery">
+<a href="photos/studio-principal.jpg" target="_blank"><img src="photos/studio-principal.jpg" alt="Vue d’ensemble du studio" loading="lazy"><span>Vue d’ensemble</span></a>
+<a href="photos/studio-cuisine.jpg" target="_blank"><img src="photos/studio-cuisine.jpg" alt="Coin cuisine" loading="lazy"><span>Kitchenette</span></a>
+<a href="photos/douche.jpg" target="_blank"><img src="photos/douche.jpg" alt="Salle d’eau avec douche" loading="lazy"><span>Salle d’eau</span></a>
+<a href="photos/studio-ensemble.jpg" target="_blank"><img src="photos/studio-ensemble.jpg" alt="Espace repas et télévision" loading="lazy"><span>Espace repas & TV</span></a>
+<a href="photos/aubignan-rue.jpg" target="_blank"><img src="photos/aubignan-rue.jpg" alt="Petite rue provençale à Aubignan" loading="lazy"><span>La Provence à proximité</span></a>
+</div></section>
+<section class="tiles" id="decouvrir">
+<a class="tile" href="https://www.google.com/maps/search/Mont+Ventoux/" target="_blank" rel="noopener"><img src="photos/vignes-aubignan.jpg" alt="Vignes et paysage près d’Aubignan" loading="lazy"><div class="tile-copy"><h3>⌕ À découvrir</h3><p>Mont Ventoux, villages et vignobles</p></div></a>
+<a class="tile" href="https://www.google.com/maps/search/restaurants+Aubignan/" target="_blank" rel="noopener"><img src="photos/studio-cuisine.jpg" alt="Coin cuisine équipé" loading="lazy"><div class="tile-copy"><h3>♜ Restaurants</h3><p>Bonnes adresses autour d’Aubignan</p></div></a>
+<a class="tile" href="https://www.google.com/maps/search/march%C3%A9+Aubignan/" target="_blank" rel="noopener"><img src="photos/aubignan-rue.jpg" alt="Ruelle de village provençal" loading="lazy"><div class="tile-copy"><h3>🛒 Commerces</h3><p>Marchés, boulangeries et commerces</p></div></a>
+<a class="tile" href="https://www.google.com/maps/search/tourisme+Vaucluse/" target="_blank" rel="noopener"><img src="photos/carte-vaucluse.jpg" alt="Carte illustrée des lieux à visiter dans le Vaucluse" loading="lazy"><div class="tile-copy"><h3>◎ Excursions</h3><p>Avignon, Gordes, L’Isle-sur-la-Sorgue</p></div></a>
+</section>
+<section class="lower" id="reservation">
+<div class="panel"><img src="photos/studio-ensemble.jpg" alt="Coin cuisine et espace repas" loading="lazy"><div class="panel-copy"><span class="kicker">DISPONIBILITÉS & TARIFS</span><h2>Réservez votre séjour</h2><p>Choisissez votre plateforme pour consulter les dates disponibles, les tarifs et finaliser votre réservation en toute sécurité.</p><div class="stack"><a class="btn btn-airbnb" href="https://www.airbnb.fr/rooms/1619705605066932698" target="_blank" rel="noopener">Réserver sur Airbnb →</a><a class="btn btn-booking" href="https://www.booking.com/Share-qVR2zi" target="_blank" rel="noopener">Rechercher sur Booking.com →</a></div><p class="note">Le bouton Airbnb mène directement à votre annonce. Le bouton Booking.com ouvre directement votre annonce.</p></div></div>
+<div class="panel map-panel"><img src="photos/vignes-aubignan.jpg" alt="Paysage de Provence" loading="lazy"><div class="panel-copy"><span class="kicker" style="color:#e4d7b8">AUBIGNAN · AU CŒUR DE LA PROVENCE</span><h2>Une situation idéale</h2><p>Explorez les villages perchés, les marchés provençaux, les vignobles et les paysages du Mont Ventoux.</p><a class="btn" href="https://www.google.com/maps/search/Aubignan+Vaucluse/" target="_blank" rel="noopener">Explorer les environs →</a></div></div>
+</section>
+<section class="quick" id="pratique">
+<a href="mailto:studioleventoux@gmail.com"><span class="icon">✉</span><span><strong>Contact</strong>studioleventoux@gmail.com</span></a>
+<a href="https://www.google.com/maps/search/parking+Aubignan/" target="_blank" rel="noopener"><span class="icon">▣</span><span><strong>Stationnement</strong>Parking à proximité</span></a>
+<a href="https://www.airbnb.fr/rooms/1619705605066932698" target="_blank" rel="noopener"><span class="icon">ⓘ</span><span><strong>Infos voyageurs</strong>Sur l’annonce Airbnb</span></a>
+<a href="#reservation"><span class="icon">♡</span><span><strong>Votre séjour</strong>Réserver maintenant</span></a>
+</section>
+<section class="install"><div><h3>📲 Emportez Le Ventoux avec vous</h3><p>Ajoutez cette application à l’écran d’accueil de votre téléphone pour la retrouver comme une appli classique.</p></div><button class="btn btn-main" id="installBtn" hidden>Installer l’application</button></section>
 </main>
-<footer>
-Le Ventoux · Aubignan · Provence 🇫🇷<br>
-<p>Nous vous souhaitons un excellent séjour !</p>
-</footer>
-</body>
-</html>
+<footer><a class="brand" href="#accueil">⌁ Le Ventoux<small>STUDIO EN PROVENCE</small></a><p>Aubignan · Vaucluse · Provence 🇫🇷</p><p>Nous vous souhaitons un excellent séjour !</p><p style="font-size:12px;margin-top:15px">© Le Ventoux</p></footer>
+<script>
+if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{})); }
+let deferredPrompt;
+const installBtn=document.getElementById('installBtn');
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.hidden=false;});
+installBtn.addEventListener('click',async()=>{if(!deferredPrompt){alert('Sur Android : ouvrez le menu ⋮ de Chrome puis choisissez « Ajouter à l’écran d’accueil » ou « Installer l’application ».');return;}deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;installBtn.hidden=true;});
+</script>
+</body></html>
